@@ -22,17 +22,42 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Me.barco_salvavidas = New System.Windows.Forms.PictureBox()
+        Me.tmr_Mover = New System.Windows.Forms.Timer(Me.components)
+        Me.tmr_Sobreviviente = New System.Windows.Forms.Timer(Me.components)
+        CType(Me.barco_salvavidas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'barco_salvavidas
+        '
+        Me.barco_salvavidas.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.barco_salvavidas.Location = New System.Drawing.Point(357, 386)
+        Me.barco_salvavidas.Name = "barco_salvavidas"
+        Me.barco_salvavidas.Size = New System.Drawing.Size(50, 50)
+        Me.barco_salvavidas.TabIndex = 1
+        Me.barco_salvavidas.TabStop = False
+        '
+        'tmr_Mover
+        '
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(764, 566)
+        Me.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.ClientSize = New System.Drawing.Size(764, 561)
+        Me.Controls.Add(Me.barco_salvavidas)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximumSize = New System.Drawing.Size(780, 600)
+        Me.MinimumSize = New System.Drawing.Size(780, 600)
         Me.Name = "Form1"
         Me.Text = "Form1"
+        CType(Me.barco_salvavidas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
+    Friend WithEvents barco_salvavidas As PictureBox
+    Friend WithEvents tmr_Mover As Timer
+    Friend WithEvents tmr_Sobreviviente As Timer
 End Class
